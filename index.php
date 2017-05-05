@@ -23,11 +23,11 @@ $logger = new Logger("default");
  *
  * https://github.com/Seldaek/monolog/issues/743
  */
-$slackHandler = new \Monolog\Handler\SlackHandler('xoxp-178796779717-178135058545-179510000118-369aa3e39408ff35ec06f4a712eda81c', '#general', 'SonsuratExtreAppLog');
+$slackHandler = new \Monolog\Handler\SlackHandler('xoxp-178796779717-178135058545-179510000118-369aa3e39408ff35ec06f4a712eda81c', '#random', 'SonsuratExtreAppLog');
+$slackHandler->setLevel(\Monolog\Logger::ERROR);
 
 $logger->pushHandler($slackHandler);
-$slackHandler->setLevel(\Monolog\Logger::INFO);
 
-$logger->info("Hello from monolog with slack integration!");
+$logger->error("Hello from monolog with slack integration!Banzaiiii !!! Banzaiii!!!", ['wasd' => 'wdawdawd']);
 
 
